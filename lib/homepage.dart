@@ -2,6 +2,7 @@ import 'dart:ui';
 
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:splitter/SecondScreen/SecondScreen.dart';
 import 'package:splitter/splitmodel.dart';
 import 'package:splitter/splitclass.dart';
 import 'package:splitter/nearbymodel.dart';
@@ -63,7 +64,7 @@ class _MyHomePageState extends State<MyHomePage> {
                               margin: EdgeInsets.only(top: 15, left: 5),
                               decoration: BoxDecoration(
                                 borderRadius: BorderRadius.circular(20),
-                                color: Color(0xFF524881).withOpacity(0.75),
+                                color: Color.fromARGB(255, 61, 45, 79).withOpacity(0.75),
                                 boxShadow: [
                                   BoxShadow(
                                     color: Color.fromRGBO(192, 192, 192, 20),
@@ -85,7 +86,7 @@ class _MyHomePageState extends State<MyHomePage> {
                                             top: Radius.circular(20),
                                           ),
                                           color:
-                                              Color(0xFF524881),
+                                          Color.fromARGB(255, 61, 45, 79),
                                         ),
                                       )),
                                   SizedBox(
@@ -143,12 +144,12 @@ class _MyHomePageState extends State<MyHomePage> {
                                 Text(
                                   'Total Bill',
                                   style: TextStyle(
-                                      fontSize: 20, color: Color(0xFF524881)),
+                                      fontSize: 20, color: Color.fromARGB(255, 61, 45, 79)),
                                 ),
                                 Text(
                                   'Split with',
                                   style: TextStyle(
-                                      fontSize: 20, color: Color(0xFF524881)),
+                                      fontSize: 20, color: Color.fromARGB(255, 61, 45, 79)),
                                 ),
                               ],
                             ),
@@ -167,26 +168,32 @@ class _MyHomePageState extends State<MyHomePage> {
                                 SizedBox(
                                   height: 20,
                                 ),
-                                Container(
-                                  padding: EdgeInsets.all(15),
-                                  width: 100,
-                                  height: 50,
-                                  decoration: BoxDecoration(
-                                    borderRadius: BorderRadius.circular(10),
-                                    color: Color(0xFF524881),
-                                    boxShadow: [
-                                      BoxShadow(
-                                        color: Color.fromRGBO(0, 0, 0, 30),
-                                        offset: Offset(0, 0),
-                                        blurRadius: 5,
-                                        spreadRadius: 0,
-                                      )
-                                    ],
-                                  ),
-                                  child: Text(
-                                    'Split Now',
-                                    style: TextStyle(
-                                        fontSize: 15, color: Color(0xFFD2C485)),
+                                GestureDetector(
+                                  onTap: (){
+                                    Navigator.push(context,
+                                        MaterialPageRoute(builder: (context) => SecondScreen()));
+                                  },
+                                  child: Container(
+                                    padding: EdgeInsets.all(15),
+                                    width: 100,
+                                    height: 50,
+                                    decoration: BoxDecoration(
+                                      borderRadius: BorderRadius.circular(10),
+                                      color: Color.fromARGB(255, 61, 45, 79),
+                                      boxShadow: [
+                                        BoxShadow(
+                                          color: Color.fromRGBO(0, 0, 0, 30),
+                                          offset: Offset(0, 0),
+                                          blurRadius: 5,
+                                          spreadRadius: 0,
+                                        )
+                                      ],
+                                    ),
+                                    child: Text(
+                                      'Split Now',
+                                      style: TextStyle(
+                                          fontSize: 15, color: Color(0xFFD2C485)),
+                                    ),
                                   ),
                                 ),
                               ],
@@ -203,7 +210,7 @@ class _MyHomePageState extends State<MyHomePage> {
                           padding: EdgeInsets.all(5),
                           decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(30),
-                            color: Color(0xFF524881),
+                            color: Color.fromARGB(255, 61, 45, 79),
                           ),
                           child: Padding(
                             padding: const EdgeInsets.all(8.0),
@@ -222,7 +229,7 @@ class _MyHomePageState extends State<MyHomePage> {
                                         width: 20,
                                         alignment: Alignment.center,
                                         decoration: BoxDecoration(
-                                          color: Color(0xFF524881),
+                                          color: Color.fromARGB(255, 61, 45, 79),
                                           shape: BoxShape.circle,
                                         ),
                                         child: Text(
@@ -314,7 +321,7 @@ class _MyHomePageState extends State<MyHomePage> {
                       padding: EdgeInsets.all(5),
                       decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(30),
-                        color: Color(0xFF524881),
+                        color: Color.fromARGB(255, 61, 45, 79),
                       ),
                       child: Padding(
                         padding: const EdgeInsets.all(8.0),
